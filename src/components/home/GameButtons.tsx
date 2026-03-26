@@ -1,8 +1,8 @@
 import GameButton from './GameButton';
-import hangmanImage from '../assets/gameButtons/hangManButton.png'
-import ticTacToeImage from '../assets/gameButtons/ticTacToeButton.png'
-import connect4Image from '../assets/gameButtons/connect4Button.png'
-import comingSoonImage from '../assets/gameButtons/comingSoonButton.png'
+import hangmanImage from '../../assets/gameButtons/hangManButton.png'
+import ticTacToeImage from '../../assets/gameButtons/ticTacToeButton.png'
+import connect4Image from '../../assets/gameButtons/connect4Button.png'
+import comingSoonImage from '../../assets/gameButtons/comingSoonButton.png'
 
 const GameButtons = () => {
 
