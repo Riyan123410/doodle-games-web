@@ -1,6 +1,7 @@
 // import { useState } from 'react';
 // import ThemeToggle from './components/ThemeToggle.tsx';
 import './App.css'; 
+import { useEffect, useState } from 'react';
 import Navbar from './components/Navbar.tsx'
 import About from './components/about/About.tsx'
 import Connect4 from './components/connect4/Connect4.tsx';
@@ -10,24 +11,31 @@ import TicTacToe from './components/ticTacToe/TicTacToe.tsx';
 
 function App() {
 
-  const base = import.meta.env.BASE_URL  // "/doodle-games-web/" in github pages, "/" in dev
+  const [, forceUpdate] = useState(0)
+
+  useEffect(() => {
+    const onHashChange = () => forceUpdate(n => n + 1)
+    window.addEventListener("hashchange", onHashChange)
+    return () => window.removeEventListener("hashchange", onHashChange)
+  }, [])
+
   let Component;
 
-  switch (window.location.pathname) {
-    case base:
-    case base + "index.html":
+  switch (window.location.hash) {
+    case "":
+    case "#":
       Component = <Home />
       break
-    case base + "about":
+    case "#about":
       Component = <About />
       break
-    case base + "hangman":
+    case "#hangman":
       Component = <Hangman />
       break
-    case base + "tic-tac-toe":
+    case "#tic-tac-toe":
       Component = <TicTacToe />
       break
-    case base + "connect4":
+    case "#connect4":
       Component = <Connect4 />
       break
   }
