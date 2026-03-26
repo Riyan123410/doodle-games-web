@@ -1,5 +1,5 @@
 import '../css/Navbar.css'
-
+import githubIcon from './icons/github.png'
 
 const Navbar = () => {
   return (
@@ -9,7 +9,7 @@ const Navbar = () => {
       {/* navigation links */}
       <ul>
         {/* <CustomLink href="/about">About</CustomLink> */}
-        <CustomLinkImage href="https://github.com/Riyan123410" img="/icons/github.png"></CustomLinkImage>
+        <CustomLinkImage href="https://github.com/Riyan123410" img={githubIcon}></CustomLinkImage>
       </ul>
     </nav>
   );
