@@ -1,0 +1,56 @@
+.title {
+    height: 60vh;
+    width: 100%;
+    align-content: center;
+    /* outline: red 2px solid; */
+
+    background-image: url(../bg.png);
+
+   background-size: auto 100%;
+    /* background-size: cover; */
+    background-position: center;
+    /* background-repeat: no-repeat; */
+}
+    
+.title-font {
+    font-size: clamp(2rem, 10vw + 3rem, 10rem);
+    font-family: 'Delicious Handrawn';
+    display: flex;
+    justify-content: center;
+    line-height: 100%;
+} 
+
+.game-button-container {
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: space-evenly;
+}
+
+.game-button {
+  padding-top: 5vw;
+  width: clamp(20em, 50vw, 25em);
+  height: clamp(20em, 50vw, 25em);
+  object-fit: contain;
+  transition: width 0.3s ease, height 0.3s ease;
+}
+.game-button:hover {
+  width: clamp(23em, 50vw, 28em);
+  height: clamp(23em, 50vw, 28em);
+  animation: wobble 1s ease-in-out infinite;
+}
+@keyframes wobble {
+  0%   { transform: rotate(0deg); }
+  25%  { transform: rotate(-3deg); }
+  75%  { transform: rotate(3deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.game-button-text {
+    font-family: 'Delicious Handrawn';
+    display: flex;
+    justify-content: center;
+    font-size: 3em;
+
+    padding-bottom: 1em;
+}
