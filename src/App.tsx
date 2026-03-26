@@ -7,11 +7,10 @@ import Connect4 from './components/connect4/Connect4.tsx';
 import Hangman from './components/hangman/Hangman.tsx';
 import Home from './components/home/Home.tsx'
 import TicTacToe from './components/ticTacToe/TicTacToe.tsx';
-const base = import.meta.env.BASE_URL  // "/doodle-games-web/" in github pages, "/" in dev
-
 
 function App() {
 
+  const base = import.meta.env.BASE_URL  // "/doodle-games-web/" in github pages, "/" in dev
   let Component;
 
   switch (window.location.pathname) {
