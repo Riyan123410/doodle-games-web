@@ -1,5 +1,5 @@
 import '../css/Navbar.css'
-import githubIcon from './icons/github.png'
+import githubIcon from '../assets/icons/github.png'
 
 const Navbar = () => {
   return (
