@@ -17,24 +17,24 @@ const Navbar = () => {
 
 export default Navbar;
 
-interface CustomLinkProps {
-  href: string;
-  children: React.ReactNode;
-}
+// interface CustomLinkProps {
+//   href: string;
+//   children: React.ReactNode;
+// }
 
 // custom link that highlights when on that page
-const CustomLink = ({ href, children }: CustomLinkProps) => {
-  const path = window.location.pathname;
+// const CustomLink = ({ href, children }: CustomLinkProps) => {
+//   const path = window.location.pathname;
 
-  return (
-    <ul>
-      {/* add active class if current path matches href */}
-      <li className={path === href ? "active" : ""}>
-        <a href={href}>{children}</a>
-      </li>
-    </ul>
-  );
-}
+//   return (
+//     <ul>
+//       {/* add active class if current path matches href */}
+//       <li className={path === href ? "active" : ""}>
+//         <a href={href}>{children}</a>
+//       </li>
+//     </ul>
+//   );
+// }
 
 interface CustomLinkImageProps {
   href: string;
