@@ -7,26 +7,29 @@ import Connect4 from './components/connect4/Connect4.tsx';
 import Hangman from './components/hangman/Hangman.tsx';
 import Home from './components/home/Home.tsx'
 import TicTacToe from './components/ticTacToe/TicTacToe.tsx';
+const base = import.meta.env.BASE_URL  // "/doodle-games-web/" in github pages, "/" in dev
+
 
 function App() {
 
   let Component;
 
   switch (window.location.pathname) {
-    case "/":
-      Component = <Home></Home>
+    case base:
+    case base + "index.html":
+      Component = <Home />
       break
-    case "/about":
-      Component = <About></About>
+    case base + "about":
+      Component = <About />
       break
-    case "/hangman":
-      Component = <Hangman></Hangman>
+    case base + "hangman":
+      Component = <Hangman />
       break
-    case "/tic-tac-toe":
-      Component = <TicTacToe></TicTacToe>
+    case base + "tic-tac-toe":
+      Component = <TicTacToe />
       break
-    case "/connect4":
-      Component = <Connect4></Connect4>
+    case base + "connect4":
+      Component = <Connect4 />
       break
   }
 

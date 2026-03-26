@@ -4,7 +4,7 @@ import githubIcon from '../assets/icons/github.png'
 const Navbar = () => {
   return (
     <nav className="nav">
-      <a href="/" className="site-title">Doodle Games</a>
+      <a href="/doodle-games-web/" className="site-title">Doodle Games</a>
 
       {/* navigation links */}
       <ul>
